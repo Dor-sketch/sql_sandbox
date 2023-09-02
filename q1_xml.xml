@@ -19,11 +19,11 @@
                 </dimentions>
             </exhibit>
             <exhibit>
-               <name>מאדים</name>
-               <artist>מ אדום</artist>
+                <name>מאדים</name>
+                <artist>מ אדום</artist>
                 <dimentions>
-                     <shape>circle</shape>
-                     <diameter>125</diameter>
+                    <shape>circle</shape>
+                    <diameter>125</diameter>
                 </dimentions>
             </exhibit>
         </exhibition>
