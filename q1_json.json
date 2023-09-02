@@ -1,0 +1,25 @@
+<museum>
+    <gallery>
+        <name>galileo art</name>
+        <location>
+            <building_num>5</building_num>
+            <building_floor>5</building_floor>
+        </location>
+        <exhibition>
+            <name>כוכבים</name>
+            <theme>strars</theme>
+            <curator>דניאלה ארץ</curator>
+            <exhibit>
+                <name>נוגה</name>
+                <artist>נוגה ס</artist>
+                <length>200</length>
+                <width>100</width>
+            </exhibit>
+            <exhibit>
+               <name>מאדים</name>
+               <artist>מ אדום</artist>
+               <diameter>125</diameter>
+            </exhibit>
+        </exhibition>
+    </gallery>
+</museum>
