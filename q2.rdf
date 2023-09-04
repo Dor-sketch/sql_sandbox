@@ -1,0 +1,26 @@
+k18 instanceOf knesset. 
+k17 instanceOf knesset. 
+k18 edate "27.3.2023". 
+k17 edate "20.2.2019". 
+r1 instanceOf running. 
+r1 chid "123". 
+r1 totalvotes "676767". 
+k18 kin r1. 
+p22 pin r1. 
+p22 pname "cherry". 
+p22 symbol "ch". 
+p22 instanceOf party. 
+p30 instanceOf party.
+p30 pname "elm". 
+p30 symbol "el". 
+r2 instanceOf running. 
+r2 chid "456". 
+r2 totalvotes "4545454". 
+k18 kin r2. 
+p30 pin r1. 
+k17 kin r3. 
+r3 instanceOf running.  
+r3 chid "789".  
+r3 totalvotes "98989". 
+p22 pin r3.
+

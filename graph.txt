@@ -1,0 +1,45 @@
+        +---------------------+
+        |   galileo-art      |
+        |   instance-of      |
+        |     gallery        |
+        +---------------------+
+                |
+                |
+                v
+        +---------------------+
+        |    כוכבים          |
+        |   instance-of      |
+        |    exhibition      |
+        |  exhibition-curator|
+        |  exhibition-theme  |
+        | exhibition-location|
+        | exhibition-exhibit|
+        +---------------------+
+                |        |        |            |            |
+                |        |        |            |            |
+                v        v        v            v            v
+        +--------+  +--------+  +-------+   +-------+   +-------+
+        |   "דניאלה ארץ"  | "כוכבי לכת" | location1|  exhibit1 | exhibit2
+        | exhibition-curator|exhibition-theme| building_num| instance-of | instance-of
+        +--------+  +--------+  +-------+   +-------+   +-------+
+                |        |        |            |
+                |        |        |            |
+                v        v        v            v
+        +------------------+ +------+    +-----------+
+        |     exhibit      | | square1|    |    circle1  |
+        |   instance-of    | | instance-of|  | instance-of|
+        |       exhibit    | | rectangle  |  |   circle  |
+        |       name       | |  length    |  |  diameter |
+        |       artist     | |  width     |  +-----------+
+        |   exhibit-form   | +-----------+
+        +------------------+
+                |
+                |
+                v
+        +-----------+
+        |   square1 |
+        | instance-of|
+        | rectangle  |
+        |   length   |
+        |   width    |
+        +-----------+

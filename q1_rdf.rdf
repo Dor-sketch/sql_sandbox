@@ -1,0 +1,24 @@
+galileo-art instance-of gallery.
+galileo-art gallery-exhibition כוכבים.
+כוכבים instance-of exhibition.
+כוכבים exhibition-curator "דניאלה ארץ".
+כוכבים exhibition-theme "כוכבי לכת".
+כוכבים exhibition-location building1.
+building1 instance-of location.
+building1 building-floor 5.
+building1 building-number 5.
+כוכבים exhibition-exhibit נוגה.
+נוגה instance-of exhibit.
+נוגה exhibit-artist "נוגה ס".
+נוגה exhibit-form  rectangle1.
+rectangle1 instance-of rectangle.
+rectangle1 length "200".
+rectangle1 width "100".
+כוכבים exhibition-exhibit מאדים.
+מאדים instance-of exhibit.
+מאדים exhibit-artist "מ אדום".
+מאדים exhibit-form circle1.
+circle1 instance-of circle.
+circle1 diameter "125".
+rectangle instance-of form.
+circle instance-of form.
