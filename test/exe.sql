@@ -148,7 +148,85 @@ select ptype, count(pname) as num_of_plants
 from plant
 group by ptype;
 
+-- i turned of GitHub->Copilot auto completetion
+-- i aslo turned off editor:quick suggestion
 
 -- combining where and group by
 -- 3.17 how many plants that their max height is bigger than 1 are in each plant type
+()
+select ptype, count(pname) as bigger_than_1m
+from plant
+where pmaxheight > 1
+group by ptype;
 
+
+
+-- when from includes multiple tables, the group action groups there caresian multiplication
+
+-- 3.18 how many bushes are in each aname
+select m.aname, sum(m.amount) as num_of_bushes
+from plantingmap as m, plant
+where plant.pname = m.pname
+    and plant.ptype = 'שיח'
+group by m.aname;
+
+-- now with the bush name
+select m.aname, m.pname, sum(m.amount) as num_of_bushes
+from plantingmap as m, plant
+where plant.pname = m.pname
+    and plant.ptype = 'שיח'
+group by m.aname, plant.pname;
+
+-- lets add some bushes
+insert into plantingmap values
+('my_bush1', 'רחוב העצמאות', '100'),
+('my_bush2', 'רחוב העצמאות', '333');
+
+insert into plant values
+('my_bush1', 'שיח', 1.00, 2.22),
+('my_bush2', 'שיח', 1.00, 2.22);
+
+-- i had to change the group by to split bushes names!!!
+
+
+-- ------------ HAVING
+-- constraints after creating the sub-grups:
+-- it is done in a "having" statment after the "group by"
+
+-- 3.19 find the anames where the heights differences between 
+-- the most taller plant and the most shorter one is bigger than 3 meters
+select aname as MAX_DIFF_BIGGER_THAN_3
+from plantingmap, plant
+-- DONT FORGET CHECK where plantingmap.pname = plant.pname -- DON'T FORGET!!!
+where plantingmap.pname = plant.pname
+group by aname
+having(max(pmaxheight) - min(pmaxheight))> 3.00 ;
+
+
+--------------- NESTED QUIRIES - IN / NOT IN...
+--------------- SUBQUIRIES
+
+
+
+-- 3.20 find trees names
+select pname
+from plant
+where ptype in ('עץ פרי', 'עץ נוי');
+
+-- 3.21 another option
+
+select pname
+from plant
+where ptype in (select ptype from plant where ptype like 'עץ%');
+
+-- note the location of % in hubrew. % represent some string... so ab% means start with ab and than some string ETC...
+
+
+-- 3.21 find the plant with max pmaxheight
+select pname
+from plant
+where pmaxheight >=all(select pmaxheight from plant);
+
+-- don't forget the ALL!!!!
+-- don't forget >= and not =>!!!
+-- sqlite doesn't support "all", lets try with MAX subqurry
